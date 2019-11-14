@@ -1,18 +1,19 @@
 ## Ryan Elmore
 ## Random Walks
 ## October 2019
-k <- 100
+k <- 200
 N <- 50
-B <- 500
+B <- 550
 T <- round(runif(N, 50, 200))
 
-png(filename = "fig/rw-du-1.png", width = 1.5*480, height = 1.5*480)
-set.seed(1215313)
+png(filename = "fig/rw-du-2.png", units = "in", res = 300,
+    width = 12, height = 12)
+set.seed(213133)
 starts <- matrix(runif(2*N, -400, 400), nc = 2)
 plot(-B:B, -B:B, axes = FALSE, ann = FALSE, type = "n")
 rect(par("usr")[1], par("usr")[3], par("usr")[2], par("usr")[4], 
-     col = "#f0f0f0")
-
+     col = "#e3d9ae", density = -100)
+# col = "#f0f0f0")
 # values <- replicate(k, gen_random_walk())
 for(j in 1:N){
   gC <- round(runif(k, 70, 160))
